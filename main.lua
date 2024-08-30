@@ -116,10 +116,10 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "" }),
     Player = Window:AddTab({ Title = "PvP Setting", Icon = "" }),
-    Teleport = Window:AddTab({ Title = "TP Island", Icon = "" }),
+    Teleport = Window:AddTab({ Title = "Travel", Icon = "" }),
     Fruit = Window:AddTab({ Title = "Fruit", Icon = "" }),
     Raid = Window:AddTab({ Title = "Raid", Icon = "" }),
     Visual = Window:AddTab({ Title = "Misc", Icon = "" }),
@@ -3179,7 +3179,7 @@ end
 end
 end)
 
-local MiscFarm = Tabs.Main:AddSection("Farm Khác")
+local MiscFarm = Tabs.Main:AddSection("Farm Other")
 
 if Third_Sea then
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {
@@ -5389,7 +5389,7 @@ DropdownFruit:OnChanged(function(Value)
 end)
 
 
-local ToggleFruit = Tabs.Fruit:AddToggle("ToggleFruit", {Title = "uy Devil Fruit",Description = "", Default = false })
+local ToggleFruit = Tabs.Fruit:AddToggle("ToggleFruit", {Title = "Ui Devil Fruit",Description = "", Default = false })
 ToggleFruit:OnChanged(function(Value)
     _G.AutoBuyFruitSniper = Value
 end)
@@ -5913,7 +5913,7 @@ end)
 
 if Second_Sea then
 Tabs.Raid:AddButton({
-    Title = "Chổ Tập Kích",
+    Title = "TP To Lab",
     Description = "",
     Callback = function()
         Tween2(CFrame.new(-6438.73535, 250.645355, -4501.50684))
@@ -5921,7 +5921,7 @@ Tabs.Raid:AddButton({
 })
 elseif Third_Sea then
     Tabs.Raid:AddButton({
-        Title = "Chổ Tập Kích",
+        Title = "TP To lab",
         Description = "",
         Callback = function()
             Tween2(CFrame.new(-5017.40869, 314.844055, -2823.0127, -0.925743818, 4.48217499e-08, -0.378151238, 4.55503146e-09, 1, 1.07377559e-07, 0.378151238, 9.7681621e-08, -0.925743818))
@@ -6572,8 +6572,8 @@ Tabs.Shop:AddButton({
 	end
 })
 Tabs.Shop:AddButton({
-	Title = "Death Step",
-	Description = "Buy Death Step",
+	Title = "Buy Death Step",
+	Description = "",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyDeathStep")
 	end
@@ -6781,10 +6781,10 @@ Tabs.Misc:AddButton({
 	end
 })
 
-local Mastery = Tabs.Misc:AddSection("Khác")
+local Mastery = Tabs.Misc:AddSection("Other")
 
 
-local ToggleRejoin = Tabs.Misc:AddToggle("ToggleRejoin", {Title = "Tự động vào lại khi bị văng", Description = "",Default = true })
+local ToggleRejoin = Tabs.Misc:AddToggle("ToggleRejoin", {Title = "Auto join when crash", Description = "",Default = true })
 ToggleRejoin:OnChanged(function(Value)
 	_G.AutoRejoin = Value
 end)
@@ -7042,7 +7042,7 @@ Tabs.Misc:AddButton({
 	end
 })
 
-local Mastery = Tabs.Misc:AddSection("Ngày")
+local Mastery = Tabs.Misc:AddSection("Day")
 
 Tabs.Misc:AddButton({
 	Title = "Remove Fog",
