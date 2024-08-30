@@ -116,7 +116,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987"}),
+    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "" }),
     Player = Window:AddTab({ Title = "PvP Setting", Icon = "" }),
     Teleport = Window:AddTab({ Title = "Travel", Icon = "" }),
@@ -3183,7 +3183,7 @@ local MiscFarm = Tabs.Main:AddSection("Farm Other")
 
 if Third_Sea then
 local ToggleBone = Tabs.Main:AddToggle("ToggleBone", {
-    Title = "Cày Xương",
+    Title = "Auto Farm Bone",
     Description = "", 
     Default = false })
 ToggleBone:OnChanged(function(Value)
@@ -3254,7 +3254,7 @@ spawn(function()
 end)
 
 local ToggleCake = Tabs.Main:AddToggle("ToggleCake", {
-    Title = "Cày Katakuri",
+    Title = "Auto Farm Katakuri Mob",
     Description = "", 
     Default = false })
 ToggleCake:OnChanged(function(Value)
@@ -3346,7 +3346,7 @@ end)
 
     if Second_Sea then
     local ToggleVatChatKiDi = Tabs.Main:AddToggle("ToggleVatChatKiDi", {
-        Title = "Cày vật Chất kì Dị",
+        Title = "Auto Farm Ecto",
         Description = "", 
         Default = false })
     ToggleVatChatKiDi:OnChanged(function(Value)
@@ -6716,7 +6716,7 @@ function Hop()
 end      
 
 
-local Mastery = Tabs.Misc:AddSection("Đội")
+local Mastery = Tabs.Misc:AddSection("Team")
 
 
 Tabs.Misc:AddButton({
