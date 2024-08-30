@@ -116,7 +116,7 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.End
 })
 local Tabs = {
-    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987" }),
+    Main = Window:AddTab({ Title = "Main", Icon = "rbxassetid://96623026167987"}),
     Stats = Window:AddTab({ Title = "Stats", Icon = "" }),
     Player = Window:AddTab({ Title = "PvP Setting", Icon = "" }),
     Teleport = Window:AddTab({ Title = "Travel", Icon = "" }),
