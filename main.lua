@@ -2600,13 +2600,13 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack','Extra
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackGamer144_Mode = Value
 	if _G.FastAttackGamer144_Mode == "Fast Attack" then
-		_G.Fast_Delay = 0.1
+		_G.Fast_Delay = 0.5
 	elseif _G.FastAttackGamer144_Mode == "Normal Attack" then
-		_G.Fast_Delay = 0.01
+		_G.Fast_Delay = 0.5
 	elseif _G.FastAttackGamer144YTB_Mode == "Super Fast Attack" then
-		_G.Fast_Delay = 0.002
+		_G.Fast_Delay = 0.5
 	elseif _G.FastAttackGamer144_Mode == "Extra Fast Attack" then
-	    _G.Fast_Delay = 0.1
+	    _G.Fast_Delay = 0.5
 	end
 end)
 
